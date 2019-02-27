@@ -32,6 +32,7 @@
 			  <div class="form-group">
 			    <label for="indirizzo">Indirizzo</label>
 			    <textarea class="form-control" id="indirizzo" rows="3"></textarea>
+			    <small id="Indirizzo help" class="form-text text-muted">Inserire Via, numero civico, cap e provincia</small>
 			  </div>
 
 			  <button type="submit" class="btn btn-primary">Invia</button>
