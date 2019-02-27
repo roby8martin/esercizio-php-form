@@ -1,3 +1,7 @@
+<?php
+	$nome = (isset($_POST['nome'])) ? $_POST['nome'] : '';
+	print $nome;
+?>
 <!doctype html>
 <html lang="it">
   <head>
@@ -18,21 +22,21 @@
   <body>
 
 	  <div class="container">
-	    <form>
+	    <form action="index.php" method="post">
 	  		<div class="form-group">
 	    		<label for="nome">Nome</label>
-	    		<input type="text" class="form-control" id="nome" placeholder="Inserisci il tuo nome">
+	    		<input type="text" name="nome" class="form-control" id="nome" placeholder="Inserisci il tuo nome">
 	  		</div>
 
 	  		<div class="form-group">
 	    		<label for="cognome">Cognome</label>
-	    		<input type="text" class="form-control" id="cognome" placeholder="Inserisci il tuo cognome">
+	    		<input  type="text" name="cognome" class="form-control" id="cognome" placeholder="Inserisci il tuo cognome">
 	  		</div>
 		  
 			  <div class="form-group">
 			    <label for="indirizzo">Indirizzo</label>
-			    <textarea class="form-control" id="indirizzo" rows="3"></textarea>
-			    <small id="Indirizzo help" class="form-text text-muted">Inserire Via, numero civico, cap e provincia</small>
+			    <textarea  class="form-control" name="indirizzo" id="indirizzo" rows="3" aria-describedby=" indirizzo"></textarea>
+			    <small id="indirizzo-help" class="form-text text-muted">Inserire Via, numero civico, cap e provincia</small>
 			  </div>
 
 			  <button type="submit" class="btn btn-primary">Invia</button>
