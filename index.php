@@ -1,7 +1,9 @@
 <?php
 	$nome = (isset($_POST['nome'])) ? $_POST['nome'] : '';
-	print $nome;
+	$cognome = (isset($_POST['cognome'])) ? $_POST['cognome'] : '';
+	$indirizzo = (isset($_POST['indirizzo'])) ? $_POST['indirizzo'] : '';
 ?>
+
 <!doctype html>
 <html lang="it">
   <head>
@@ -12,16 +14,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <style type="text/css">
-    	
-    </style>
-
     <title>Ciao, mondo!</title>
   </head>
 
   <body>
 
 	  <div class="container">
+	  	<div class="alert alert-primary" role="alert">
+
+				<?php
+				print $nome . '<br>';
+				print $cognome . '<br>';
+				print $indirizzo . '<br>';
+				?>
+				
+			</div>
+
 	    <form action="index.php" method="post">
 	  		<div class="form-group">
 	    		<label for="nome">Nome</label>
@@ -41,6 +49,7 @@
 
 			  <button type="submit" class="btn btn-primary">Invia</button>
 			</form>
+
 		</div>
     
     <!-- Optional JavaScript -->
