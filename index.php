@@ -61,7 +61,7 @@
 				</ul>
 			</div>
 
-			<?php if ($nome == ''): ?>
+			<?php if (empty($nome)): ?>
 			<div class="alert alert-danger" role="alert">il nome non è stato inserito</div>
 			<?php else: ?>
 			<div class="alert alert-success" role="alert">il nome è stato inserito</div>
