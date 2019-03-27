@@ -19,17 +19,8 @@
 
   <body>
 
-	  <div class="container">
-	  	<div class="alert alert-primary" role="alert">
-
-				<?php
-				print $nome . '<br>';
-				print $cognome . '<br>';
-				print $indirizzo . '<br>';
-				?>
-				
-			</div>
-
+	  <div class="container" style= "margin-top: 30px">
+	  	
 	    <form action="index.php" method="post">
 	  		<div class="form-group">
 	    		<label for="nome">Nome</label>
@@ -50,6 +41,16 @@
 			  <button type="submit" class="btn btn-primary">Invia</button>
 			</form>
 
+		<div class="alert alert-primary" role="alert" style= "margin-top: 60px">
+
+				<?php
+				print $nome . '<br>';
+				print $cognome . '<br>';
+				print $indirizzo . '<br>';
+				?>
+				
+		</div>
+
 			<div class="alert alert-primary" role="alert">
 				<ul>
 					<?php
@@ -59,6 +60,13 @@
 					?>
 				</ul>
 			</div>
+
+			<?php if ($nome == ''): ?>
+			<div class="alert alert-danger" role="alert">il nome non è stato inserito</div>
+			<?php else: ?>
+			<div class="alert alert-success" role="alert">il nome è stato inserito</div>
+			<?php endif; ?>
+			
 		</div>
     
     <!-- Optional JavaScript -->
